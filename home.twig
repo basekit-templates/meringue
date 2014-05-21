@@ -5,14 +5,16 @@
 
 <div class="bk-pt-home">
 
-<header class="bk-header wrapper">
-    <div class="companyheader clearfix">
-        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+<header class="bk-header">
+    <div class="wrapper clearfix">
+        <div class="companyheader">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        <div class="nav">
+            {{widget('extendednavigation', 'navigationheader', {})|raw}}
+        </div>    
     </div>
-    <div class="nav">
-        {{widget('extendednavigation', 'navigationheader', {})|raw}}
-    </div>    
 </header>
 <section>
         {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
