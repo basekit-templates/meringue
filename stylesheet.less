@@ -171,9 +171,12 @@ section {
 .widget.feature button {
     padding: 15px 25px;
     border: 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
+    -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
+    box-shadow:         0px 3px 0px darken(@color-swatch3,15%);   
     font-family: @font-swatch7-font-family;
     font-weight:@font-swatch7-font-weight;
     font-size: @font-swatch7-font-size;
@@ -201,21 +204,57 @@ section {
     .ecombasket-pull {
         background-color: @font-swatch7-background-color;
         position: relative;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
+        -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
+        box-shadow:         0px 3px 0px darken(@color-swatch3,15%);  
+        &:hover {
+            background-color: @font-swatch7-background-color-hover;
+        } 
     }
     .ecombasket-list-container {
-        margin-top: -2px;
+        margin-top: 8px;
         left: 0;
         right:0;
         position: relative;
-        border: 2px solid lighten(@color-swatch5,15%);
-        background-color: @color-swatch1;
-        ul li .ecombasket-item-image {
-            width: 56px;
-            height: 56px;
-            margin-right: 20px;
+        border: none;
+        background-color: @color-swatch7;
+        padding: 0.5em 2em 1em;
+        ul li {
+            border-bottom: 1px dotted lighten(@color-swatch5,20%);
+            .ecombasket-item-image {
+                width: 96px;
+                height: 96px;
+                margin-right: 20px;
+            }
+            .ecombasket-item-info {
+                .ecombasket-item-title {
+                    color: @color-swatch5;
+                    text-decoration: underline;
+                    &:hover {
+                        color: @color-swatch3;
+                    }
+                }
+                .ecombasket-remove-button:hover {
+                    color: @color-swatch3;
+                }
+            }
         }
         .ecombasket-checkout-wrap .ecombasket-checkout-link {
             display: inline-block;
+            text-align: center;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
+            -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
+            box-shadow:         0px 3px 0px darken(@color-swatch3,15%);   
+            &:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
             @media @mobile {
                 display: block;
             }
@@ -565,6 +604,9 @@ section {
                 margin: 0;
                 &:last-child {
                     padding-right: 0;
+                    @media only screen and (max-width: 550px) {
+                        border-bottom: none;
+                    }
                 }
                 @media only screen and (max-width: 550px) {
                     width: 100%;
@@ -723,7 +765,7 @@ section {
                                 }
                                 .inner-item .menu-section-item-dietary-props .dietary-icon {
                                     padding-left: 0;
-                                    color: @color-swatch2;
+                                    color: @color-swatch3;
                                 }
                         }/* end menu-item-promoted */
 
@@ -866,7 +908,7 @@ section {
                             }
                             .inner-item .menu-section-item-dietary-props .dietary-icon {
                                 padding-left: 0;
-                                color: @color-swatch2;
+                                color: @color-swatch3;
                             }
                         }
                         
@@ -986,7 +1028,7 @@ button:hover {
    =============================== */
 
     .widget.contactform fieldset input, .widget.contactform fieldset textarea {
-        border: 1px solid darken(@color-swatch1,3%);
+        border: 1px solid darken(@color-swatch1,8%);
     }
 
    .contactform fieldset {
@@ -1000,7 +1042,7 @@ button:hover {
    =============================== */
 
    .widget.signupform fieldset input, .widget.profile form fieldset input {
-        border: 1px solid darken(@color-swatch1,3%);
+        border: 1px solid darken(@color-swatch1,8%);
         background-color: #ffffff;
         height: 48px;
         margin: 0 5px 5px 0;
@@ -1211,7 +1253,7 @@ button:hover {
             display: block;
         }
         input {
-            border: 1px solid darken(@color-swatch1,3%);
+            border: 1px solid darken(@color-swatch1,8%);
             height: 49px;
             margin: 0 5px 5px 0;
             width: 100%;
@@ -1401,7 +1443,6 @@ hr {
             }
         }
         .btn {
-            border: 2px solid lighten(@color-swatch5,15%);
             width: 70%;
             margin: 2.5em 0 0;
             @media @tablet {
