@@ -590,7 +590,24 @@ body {
    MENU SECTIONS NAVIGATION
    =============================== */
 
-.bk-pt-home .widget.menusections, .bk-pt-menu .widget.menusections {
+.bk-pt-home .widget.menusections {
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
+    box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
+    @media @tablet {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.bk-pt-menu .widget.menusections {
     position: absolute;
     left: 0;
     right: 0;
@@ -657,7 +674,8 @@ body {
    MENU
    =============================== */
 
-.bk-pt-home .widget.menu, .bk-pt-menu .widget.menu {   
+
+.bk-pt-menu .widget.menu {   
     top: 90px;
     margin-bottom: 90px;
     @media @tablet {
