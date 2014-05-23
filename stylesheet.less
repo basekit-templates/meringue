@@ -69,8 +69,10 @@ body {
     display: block;
     float: left;
     padding-top: 1em;
+    width: 25%;
     @media @tablet {
         padding: 1em 0;
+        width: 75%;
     }
     @media @mobile {
         max-width: 330px;
@@ -276,11 +278,19 @@ section {
    EXTENDED NAVIGATION
    =============================== */
 
+ .nav {
+    width: 75%;
+    display: inline-block;
+    @media @tablet {
+        width: 100%;
+        display: block;
+    }
+ }  
+
 .widget.extendednavigation {
     max-width: 100%;
     min-height: 40px;
     .extendednavigation {
-        float: right;
         position: relative;
         max-width: 691px;
         margin: 0 auto;
@@ -295,21 +305,18 @@ section {
         }
         ul {
             display: inline-block;
-            float: none;
             margin: 10px auto 0;
-            text-align: center;
             padding: 1.5em 0;
             @media @tablet {
                 /* Hidden until nav icon is clicked */
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
-                border-top: 1px solid @color-swatch7;
+                border-top: none;
                 margin: 0 auto;
-                padding: 40px 0 0;
+                padding: 0;
             }
             li {
-                float: left;
                 display: block;
                 padding: 5px 0;
                 @media @tablet {
@@ -396,7 +403,7 @@ section {
                         position: relative;
                         &:after {
                             content: "\25BC";
-                            font-size: 5px;
+                            font-size: 7px;
                             position: absolute;
                             top: 1px;
                             display: block;
@@ -404,14 +411,13 @@ section {
                             right: 0;
                             color: @color-swatch6;
                             @media @tablet {
-                                font-size: 10px;
                                 color: @color-swatch6;
-                                padding-right: 10px;
+                                padding-right: 5px;
                             }
                         }
                         @media @tablet {
                                 color: @color-swatch5;
-                                padding: 0;
+                                padding-right: 20px;
                             }
                         &:hover {
                             color: @font-swatch6-color-hover;
@@ -465,7 +471,7 @@ section {
                         width: 100%;
                         height: 3px;
                         background: @color-swatch4;
-                        top: 15px;
+                        top: 20px;
                         left: 0;
                         box-shadow: 0 6px 0 @color-swatch4, 0 12px 0 @color-swatch4;
                     }
