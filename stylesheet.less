@@ -13,6 +13,12 @@ body {
 
 .bk-pt-default .main {
     padding-top: 2.5em;
+    @media @tablet {
+        padding-top: 2em;
+    }
+    @media @mobile {
+        padding-top: 1.5em;
+    }
 }
 
 .main {
@@ -22,13 +28,13 @@ body {
     padding-bottom: 2.5em;
     padding-left: 0;
     @media @tablet {
-        padding-top: 2em;
+        padding-top: 0;
         padding-right: 0;
         padding-bottom: 2em;
         padding-left: 0;
     }
     @media @mobile {
-        padding-top: 1.5em;
+        padding-top: 0;
         padding-right: 0;
         padding-bottom: 1.5em;
         padding-left: 0;
