@@ -231,33 +231,52 @@ body {
             }
             .ecombasket-item-info {
                 .ecombasket-item-title {
-                    color: @color-swatch5;
-                    text-decoration: underline;
+                    color: @color-swatch3;
+                    text-decoration: none;
+                    font-size: @font-swatch5-font-size;
                     &:hover {
                         color: @color-swatch3;
+                        text-decoration: underline;
                     }
                 }
-                .ecombasket-remove-button:hover {
+                .ecombasket-remove-button {
+                    border: none;
+                    background-color: transparent;
+                    text-decoration: none;
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+                    text-align: left;
                     color: @color-swatch3;
+                    font-size: @font-swatch5-font-size;
+                    &:hover {
+                        color: @color-swatch5;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
-        .ecombasket-checkout-wrap .ecombasket-checkout-link {
-            display: inline-block;
-            text-align: center;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            border-radius: 5px;
-            -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
-            -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
-            box-shadow:         0px 3px 0px darken(@color-swatch3,15%);   
-            &:hover {
-                cursor: pointer;
-                text-decoration: none;
-            }
-            @media @mobile {
-                display: block;
-            }
+    }
+    .ecombasket-total-wrap p {
+        padding: 2em 0;
+        display: inline-block;
+    }
+    .ecombasket-summary-wrap .ecombasket-summary-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
+        -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
+        box-shadow:         0px 3px 0px darken(@color-swatch3,15%);   
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        @media @mobile {
+            display: block;
         }
     }
 }
