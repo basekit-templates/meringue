@@ -59,7 +59,7 @@ body {
    =============================== */
 
 .bk-pt-default .bk-header {
-    border-bottom: 1px solid @color-swatch6;
+    border-bottom: 1px solid darken(@color-swatch1,15%);
     @media @tablet {
         min-height: 85px;
     }
@@ -283,210 +283,120 @@ body {
         width: 100%;
         display: block;
     }
- }  
+ }
 
-.widget.extendednavigation {
+ .widget.extendednavigation {
+    .clearfix;
+    margin-left: -15px;
+    margin-right: -15px;
     max-width: 100%;
     min-height: 40px;
-    .extendednavigation {
-        position: relative;
-        max-width: 691px;
-        margin: 0 auto;
-        @media @tablet {
+    @media @tablet {
+        margin-left: 0px;
+        margin-right: 0px;
         float: none;
         max-width: 100%;
+    }
+    ul {
+        margin: 10px auto 0;
+        padding: 1.5em 0;
+        @media @tablet {
+            margin-top: 0;
+            padding: 0;
         }
         li {
-            ul {
-                display: none !important;
+            padding: 0;
+            float: none;
+            display: inline-block;
+            &:first-child {
+                @media @tablet {
+                    border-top: 1px solid darken(@color-swatch1,8%);
+                }
+            }
+            &:last-child {
+                @media @tablet {
+                    border-bottom: none;
+                }
+            }
+            @media @tablet {
+                border-bottom: 1px solid darken(@color-swatch1,8%);
+            }
+            &.folder {
+                .text {
+                    padding: 6px 15px;
+                    @media @tablet {
+                        padding: 8px 15px 8px 1px;
+                    }
+                }
+                &:after {
+                    right: 0;
+                    border-top-color: @font-swatch6-color;
+                }              
+                &:hover:after {
+                    border-top-color: @font-swatch6-color-hover;
+                }
+            }
+            a {
+                padding: 6px 15px;
+                @media @tablet {
+                    padding: 8px 1px;
+                }
             }
         }
-        ul {
-            display: inline-block;
-            margin: 10px auto 0;
-            padding: 1.5em 0;
+        li:hover ul {
+            border: 1px solid darken(@color-swatch1,8%);
+            background-color: @color-swatch1;
             @media @tablet {
-                /* Hidden until nav icon is clicked */
-                display: none;
-                /* Then these styles are applied */
-                width: 100%;
-                border-top: none;
-                margin: 0 auto;
-                padding: 0;
+                margin: 0;
             }
             li {
-                display: inline-block;
-                float: none;
-                padding: 5px 0;
-                @media @tablet {
-                    width: 100%;
-                    padding: 1em 0;
-                    border-top: 1px dotted fade(@color-swatch5, 25%);
-                    border-bottom: none;
-                    background-color: @color-swatch1;
-                }
-                &:last-child {
-                    @media @tablet {
-                        border-bottom: 1px solid fade(@color-swatch5, 25%);
-                    }
-                }
-
-                &:hover {
-                    ul {
-                        display: block !important;
-                        position: absolute;
-                        background-color: @color-swatch1;
-                        border: 1px solid fade(@color-swatch3, 25%);
-                        z-index: 500;
-                        padding: 0;
-                        margin: 7px 0 0 0;
-                        li {
-                            display: block;
-                            width: 100%;
-                            &:first-child {
-                                @media @tablet {
-                                    border-top: none;
-                                }
-                            }
-                            &:last-child {
-                                @media @tablet {
-                                    border-bottom: none;
-                                }
-                            }
-                                .box-sizing {
-                                    a {
-                                        display: block;
-                                        color: @color-swatch5;
-                                        padding: 0;
-                                    }
-                                }
-                        }
-                    }
-                }
-
+                padding: 0 !important;
                 a {
-                    display: block;
-                    padding: 0 15px;
-                    font-family: @font-swatch6-font-family;
-                    font-size: @font-swatch6-font-size;
-                    font-weight: @font-swatch6-font-weight;
-                    color: @font-swatch6-color;
-                    line-height: @font-swatch6-line-height;
-                    letter-spacing: @font-swatch6-letter-spacing;
-                    &:hover {
-                        color: @font-swatch6-color-hover;
-                        text-decoration: underline;
-                        @media @tablet {
-                            color: @color-swatch5;
-                        }
-                    }
-                    @media @tablet {
-                        color: @color-swatch5;
-                        padding: 0;
-                    }
+                    padding: 0;
                 }
-
-                &.folder {
-                    /* Folder dropdown arrow BG style goes Here */  
-                    margin-right: 20px;            
-                    cursor: pointer;
-                    .text {
-                        display: block;
-                        padding: 0 15px;
-                        font-family: @font-swatch6-font-family;
-                        font-size: @font-swatch6-font-size;
-                        font-weight: @font-swatch6-font-weight;
-                        color: @font-swatch6-color;
-                        line-height: @font-swatch6-line-height;
-                        letter-spacing: @font-swatch6-letter-spacing;
-                        position: relative;
-                        &:after {
-                            content: "\25BC";
-                            font-size: 7px;
-                            position: absolute;
-                            top: 1px;
-                            display: block;
-                            z-index: 9999999;
-                            right: 0;
-                            color: @color-swatch6;
-                            @media @tablet {
-                                color: @color-swatch6;
-                                padding-right: 5px;
-                            }
-                        }
-                        @media @tablet {
-                                color: @color-swatch5;
-                                padding-right: 20px;
-                            }
-                        &:hover {
-                            color: @font-swatch6-color-hover;
-                            text-decoration: none;
-                            @media @tablet {
-                                color: @color-swatch5;
-                            }
-                        }
-                    }
-                    ul {
-                        padding: 0;
-                        @media @tablet {
-                            margin-top: 14px;
-                        }
-                        li {
-                            a {
-                                .text {
-                                    padding: 0;
-                                    @media @tablet {
-                                        padding: 0 15px;
-                                    }
-                                    &:after {
-                                        content: "";
-                                    }
-                                }
-                            }
-                        }
-                    }
-
+                .text {
+                    padding: 8px 15px;
                 }
-            }
-        }
-
-        a {
-            &.pull {
-                display: none;
                 @media @tablet {
-                    display: block;
-                    margin: 0;
-                    width: 20px;
-                    height: 44px;
-                    position: absolute;
-                    top: 20px;
-                    right: 0;
-                    &:hover {
-                       cursor: pointer;
-                    }
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        width: 100%;
-                        height: 3px;
-                        background: @color-swatch4;
-                        top: 20px;
-                        left: 0;
-                        box-shadow: 0 6px 0 @color-swatch4, 0 12px 0 @color-swatch4;
-                    }
+                    padding: 6px 5px;
                 }
             }
         }
     }
-    .bk-overlay.hover {
-        min-height: 91px;
+    a {
+        &.pull {
+            width: 26px;
+            height: 16px;
+            @media @tablet {
+                top: 38px;
+            }
+        }
     }
 }
 
-.widget .extendednavigation ul li.folder:after {
-    display: none;
+div.widget .extendednavigation ul.align-center, div.widget.extendednavigation ul.align-center, div.widget .extendednavigation ul.align-none, div.widget.extendednavigation ul.align-none {
+    float: left;
 }
 
+// Selected state & hover state
+
+.extendednavigation ul li:hover, .extendednavigation ul li.folder ul li:hover, .extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+    a, .text {
+        color: @font-swatch6-color-hover;
+        text-decoration: underline;
+    }
+}
+
+.extendednavigation ul li:hover ul li {
+    a, .text {
+        text-decoration: none;
+    }
+    
+}
+
+.extendednavigation ul li.folder.selected ul li .text {
+    color: @font-swatch6-color;
+}
 
 /* ===============================
   ECOM - PRODUCTLIST
