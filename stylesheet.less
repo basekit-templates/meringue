@@ -511,18 +511,18 @@ div.widget .extendednavigation ul.align-center, div.widget.extendednavigation ul
         box-shadow: none;
     }
 }
-
 .widget {
     &.menusections {
         min-height: 40px;
-        background-color: @color-swatch2;
+        background-color: @color-swatch7;
+        border: 1px solid darken(@color-swatch7,3%);
         text-align: center;
         ul {
             display: inline-block;
             width: 100%;
             margin: 1em auto;
             list-style: none;
-            padding: 1.2em 0 1em;
+            padding: 0.9em 0 0.7em;
             @media only screen and (max-width: 550px) {
                 padding: 0;
                 margin: 0 auto;
@@ -1261,6 +1261,7 @@ ul.twitter {
             &:hover {
                 cursor: pointer;
                 text-decoration: none;
+                background-color: @font-swatch7-background-color-hover;
             }
         }
     }
