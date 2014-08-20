@@ -1266,6 +1266,71 @@ ul.twitter {
     }
 }
 
+a.blog-post-pagination-page {
+    padding: 8px 14px;
+    font-family: @font-swatch7-font-family;
+    color: @font-swatch7-color;
+    font-size: @font-swatch7-font-size;
+    font-weight: @font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    background-color: @font-swatch7-background-color;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 0px darken(@color-swatch3,15%);
+    -moz-box-shadow:    0px 3px 0px darken(@color-swatch3,15%); 
+    box-shadow:         0px 3px 0px darken(@color-swatch3,15%);   
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        background-color: @font-swatch7-background-color-hover;
+    }
+}
+
+.widget.blogpost .blog-post-metadata time {
+    font-family: @font-swatch5-font-family;
+    color: @font-swatch5-color;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+    padding-bottom: 30px;
+    display: inline-block;
+}
+
+.blog-post-sharing {
+    margin: 35px 0;
+    button {
+        &.btn.facebook {
+            background-color: #3b5998;
+            -webkit-box-shadow: 0px 3px 0px darken(#3b5998,25%);
+            -moz-box-shadow:    0px 3px 0px darken(#3b5998,25%);
+            box-shadow:         0px 3px 0px darken(#3b5998,25%);
+            &:hover {
+                background-color:darken(#3b5998,5%);
+            }
+        }
+        &.btn.twitter {
+            background-color: #4099FF;
+            -webkit-box-shadow: 0px 3px 0px darken(#4099FF,25%);
+            -moz-box-shadow:    0px 3px 0px darken(#4099FF,25%);
+            box-shadow:         0px 3px 0px darken(#4099FF,25%);
+            &:hover {
+                background-color:darken(#4099FF,5%);
+            }
+        }
+        &.btn.googleplus {
+            background-color: #d34836;
+            -webkit-box-shadow: 0px 3px 0px darken(#d34836,25%);
+            -moz-box-shadow:    0px 3px 0px darken(#d34836,25%);
+            box-shadow:         0px 3px 0px darken(#d34836,25%);
+            &:hover {
+                background-color:darken(#d34836,5%);
+            }
+        }
+    }
+}
+
 /* ===============================
   SOCIAL ICONS 
    =============================== */
