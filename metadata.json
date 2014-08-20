@@ -2,7 +2,6 @@
     "name":"Meringue",
     "thumbnail":"meringue.png",
     "screenshot":"meringue.png",
-    "pageTypes": ["default", "home", "menu"],
     "templateType":"menu",
     "tags": {
     "en": ["clean", "menu", "cafe", "bar", "restaurant"],
