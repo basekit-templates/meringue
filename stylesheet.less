@@ -11,30 +11,20 @@ body {
     background-size: cover;
 }
 
-.bk-pt-default .main {
-    padding-top: 2.5em;
-    @media @tablet {
-        padding-top: 2em;
-    }
-    @media @mobile {
-        padding-top: 1.5em;
-    }
-}
-
 .main {
     clear: both;
-    padding-top: 0;
+    padding-top: 2.5em;
     padding-right: 0;
     padding-bottom: 2.5em;
     padding-left: 0;
     @media @tablet {
-        padding-top: 0;
+        padding-top: 2em;
         padding-right: 0;
         padding-bottom: 2em;
         padding-left: 0;
     }
     @media @mobile {
-        padding-top: 0;
+        padding-top: 1.5em;
         padding-right: 0;
         padding-bottom: 1.5em;
         padding-left: 0;
@@ -58,7 +48,7 @@ body {
    HEADER
    =============================== */
 
-.bk-pt-default .bk-header {
+.bk-header {
     border-bottom: 1px solid darken(@color-swatch1,15%);
     @media @tablet {
         min-height: 85px;
@@ -351,6 +341,11 @@ body {
             }
             li {
                 padding: 0 !important;
+                &:first-child {
+                @media @tablet {
+                        border-top: none;
+                    }
+                }
                 a {
                     padding: 0;
                 }
