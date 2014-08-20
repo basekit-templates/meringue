@@ -991,16 +991,45 @@ button:hover {
         width: 100%;
     }
 
-
-
 /* ===============================
-  TWITTER
+   TWITTER
    =============================== */
 
-   .twitter-profile-pic {
-        float: left;
-        margin-right: 10px;
+.widget.twitter .bk-full-name {
+    color: @color-swatch3;
+}
+
+.widget.twitter ul li span a {
+    color: @color-swatch3;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
     }
+}
+
+ul.twitter {
+    .twitter-profile-pic {
+        margin-right: 10px;
+        margin-top: 2px;
+        a img {
+            width: 48px;
+        }
+    }
+    .twitter-content {
+        padding-left: 68px;
+        p {
+            padding-bottom: 0;
+        }
+        p, span, time, span a {
+            font-family:@font-swatch5-font-family;
+            font-weight: @font-swatch5-font-weight;
+            color:@font-swatch5-color;
+            line-height:@font-swatch5-line-height;
+            letter-spacing: @font-swatch5-letter-spacing;
+            font-size: @font-swatch5-font-size;
+        }
+    }
+}
 
 /* ===============================
    GALLERY WIDGET
